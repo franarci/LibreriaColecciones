@@ -40,7 +40,7 @@ namespace WindowsList
 
         private void btnTraerPorCiudad_Click(object sender, EventArgs e)
         {
-            autores = AdminAutores.listarPorCiudad(autores, Microsoft.VisualBasic.Interaction.InputBox("Ingrese una ciudad"));
+            autores = AdminAutores.listarPorCiudad(autores, Interaction.InputBox("Ingrese una ciudad"));
             actualizarGrilla();
         }
 
