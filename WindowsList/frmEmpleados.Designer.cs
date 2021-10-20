@@ -138,6 +138,7 @@
             this.btnTraerPorId.TabIndex = 24;
             this.btnTraerPorId.Text = "Traer Por Id";
             this.btnTraerPorId.UseVisualStyleBackColor = true;
+            this.btnTraerPorId.Click += new System.EventHandler(this.btnTraerPorId_Click);
             // 
             // txtNacionalidad
             // 

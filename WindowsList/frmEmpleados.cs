@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades.Models.Admin;
 using Entidades.Models;
+using Microsoft.VisualBasic;
 
 namespace WindowsList
 {
@@ -46,6 +48,12 @@ namespace WindowsList
         {
             grdEmpleados.DataSource = null;
             grdEmpleados.DataSource = empleados;
+        }
+
+        private void btnTraerPorId_Click(object sender, EventArgs e)
+        {
+            Empleado empleado = AdminEmpleados.buscarPorId(empleados, Convert.ToInt32(Interaction.InputBox("Ingrese un id")));
+            MessageBox.Show(empleado != null ? "El empleado es: "+ empleado.Nombre + " " +empleado.Apellido : "No se encontro ningun empleado con ese id");
         }
     }
 }
