@@ -9,18 +9,27 @@ namespace Entidades.Models.Admin
     public static class AdminEmpleados
     {
         /// <summary>
-        /// Filtra una lista de autores por ciudad
+        /// Busca un empleado por id
         /// </summary>
-        /// <param name="autores">Una lista List<Autor></param>
-        /// <param name="ciudad">Un string que representa una ciudad</param>
-        /// <returns>Devuelve ua lista de tipo List<Autor> filtrada por ciudad</Autor></returns>
-        public static List<Autor> listarPorCiudad(List<Autor> autores, string ciudad)
+        /// <param name="empleados">Una lista List<Empleado></param>
+        /// <param name="id">Un int que representa un id</param>
+        /// <returns>Devuelve un empleado, resultado de filtrar por id</returns>
+        public static Empleado buscarPorId(List<Empleado> empleados, int id)
         {
-            return autores.FindAll(
-                delegate (Autor autor)
+            int index = 0;
+            while (index < empleados.Count - 1)
+            {
+                if (empleados[index].Id == id)
                 {
-                    return autor.Ciudad == ciudad;
-                });
+                    break;
+                }
+                else
+                {
+                    index++;
+                }
+            }
+
+            return empleados[index].Id == id ? empleados[index] : null;
         }
     }
 }
