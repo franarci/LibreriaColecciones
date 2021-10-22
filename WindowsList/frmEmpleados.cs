@@ -55,5 +55,11 @@ namespace WindowsList
             Empleado empleado = AdminEmpleados.buscarPorId(empleados, Convert.ToInt32(Interaction.InputBox("Ingrese un id")));
             MessageBox.Show(empleado != null ? "El empleado es: "+ empleado.Nombre + " " +empleado.Apellido : "No se encontro ningun empleado con ese id");
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            AdminEmpleados.Eliminar(empleados, Convert.ToInt32(Interaction.InputBox("Ingrese un id")));
+            actualizarGrilla();
+        }
     }
 }

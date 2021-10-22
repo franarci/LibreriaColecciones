@@ -31,5 +31,20 @@ namespace Entidades.Models.Admin
 
             return empleados[index].Id == id ? empleados[index] : null;
         }
+
+        /// <summary>
+        /// Elimina un empleado por id
+        /// </summary>
+        /// <param name="empleados">Una lista List<Empleado></param>
+        /// <param name="id">Un id</param>
+        public static void Eliminar(List<Empleado> empleados,int id)
+        {
+
+            Empleado e = buscarPorId(empleados, id);
+            if(e != null)
+            {
+                empleados.Remove(e);
+            }   
+        }
     }
 }
