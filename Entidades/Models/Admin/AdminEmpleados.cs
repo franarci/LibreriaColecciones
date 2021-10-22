@@ -33,7 +33,7 @@ namespace Entidades.Models.Admin
         }
 
         /// <summary>
-        /// Elimina un empleado por id
+        /// Elimina un empleado de una lista de empleados
         /// </summary>
         /// <param name="empleados">Una lista List<Empleado></param>
         /// <param name="id">Un id</param>
