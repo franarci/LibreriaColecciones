@@ -8,6 +8,6 @@ namespace Entidades.Models
 {
     public class Publicador : Persona
     {
-        public Publicador(int id, string apellido, string nombre, DateTime fechaNac, string ciudad, string nacionalidad) : base(id, apellido, nombre, fechaNac, ciudad) {}
+        public Publicador(int id, string apellido, string nombre, DateTime fechaNac, string ciudad) : base(id, apellido, nombre, fechaNac, ciudad) {}
     }
 }
